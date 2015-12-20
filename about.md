@@ -56,7 +56,7 @@ header-color: "#208C5B"
 
 - [博客：www.cnfeat.com](www.cnfeat.com)
 
-- [微博@CnFeat](http://weibo.com/207775270)
+- [微博@Pinary](http://weibo.com/207775270)
 
 - [知乎@陈素封](http://www.zhihu.com/people/Feat)
 
