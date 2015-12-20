@@ -1,8 +1,9 @@
 # Site settings
 title: 读立写生
 header-img: "img/facebook.jpg"
+header-color: "#395692"
 tagline: "cn"  
-description: "陈素封|读而立·写而生"  
+description: "鹏程|读而立·写而生"  
 baseurl: ""
 url: "http://cnfeat"  
 
