@@ -33,6 +33,43 @@ header-img: "img/semantic.jpg"
 {% endfor %}
 </ul>
 
+
+<div id='tag_cloud'>
+{% for cat in site.categories %}
+<a href="#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat[0] }}</a>
+{% endfor %}
+</div>
+
+<ul class="listing">
+{% for cat in site.categories %}
+  <li class="listing-seperator" id="{{ cat[0] }}">{{ cat[0] }}</li>
+{% for post in cat[1] %}
+  <li class="listing-item">
+  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+{% endfor %}
+</ul>
+
+
+<div class="col-sm-3">
+	<div class="shadow-corner-curl hidden-xs">
+	  <div class="categories-list-header">
+		Categories
+	  </div>
+	  
+	  <a href="{{'/index.html' | prepend: site.baseurl}}" class="categories-list-item" cate="All">
+		All<span class="my-badge"> {{site.posts | size}}</span>
+	  </a>
+	  {% for category in site.categories order:ascending %}
+		<a href="javascript:;" class="categories-list-item" cate="{{ category | first }}">
+		  {{ category | first }} <span class="my-badge">{{ category | last | size }}</span>
+		</a>
+	  {% endfor %}
+	</div>
+</div>
+
 <script src="/media/js/jquery.tagcloud.js" type="text/javascript" charset="utf-8"></script> 
 <script language="javascript">
 $.fn.tagcloud.defaults = {
